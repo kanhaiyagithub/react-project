@@ -1,10 +1,14 @@
 // src/pages/LinkedInServices.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa6";
 import "./LinkedInServices.css";
+import PricingModal from "../components/PricingModal";
+import { openWhatsAppSupport } from "../utils/whatsapp";
 
 export default function LinkedInServices() {
+  const [selectedService, setSelectedService] = useState(null);
+  const platform = "linkedin";
   const items = [
     {
       id: "followers",
@@ -70,13 +74,16 @@ export default function LinkedInServices() {
               <p className="ln-desc">{it.description}</p>
 
               <div className="ln-actions">
-                <Link to={`/services/linkedin/${it.id}`} className="btn-primary">
+                <button
+                  className="btn-primary"
+                  onClick={() => setSelectedService(it.title)}
+                >
                   View & Order
-                </Link>
+                </button>
 
                 <button
                   className="btn-ghost"
-                  onClick={() => alert("Support: support@socialviral.com")}
+                  onClick={() => openWhatsAppSupport(it.title)}
                 >
                   Contact Support
                 </button>
@@ -86,6 +93,14 @@ export default function LinkedInServices() {
         </section>
 
       </div>
+
+      {/* PRICING MODAL */}
+      <PricingModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        serviceTitle={selectedService}
+        platform={platform}
+      />
     </div>
   );
 }

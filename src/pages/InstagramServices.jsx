@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./InstagramServices.css";
+import PricingModal from "../components/PricingModal";
+import { openWhatsAppSupport } from "../utils/whatsapp";
 
 export default function InstagramServices() {
+  const [selectedService, setSelectedService] = useState(null);
+  const platform = "instagram";
+
   const categories = [
     { name: "Buy Instagram Followers", price: "₹199 / 100" },
     { name: "Buy Instagram Likes", price: "₹99 / 100" },
@@ -12,6 +17,7 @@ export default function InstagramServices() {
     { name: "Buy Instagram Saves", price: "₹59 / 100" },
     { name: "Buy Instagram Story Views", price: "₹99 / 500" },
   ];
+
 
   const serviceCards = [
     {
@@ -56,6 +62,14 @@ export default function InstagramServices() {
     },
   ];
 
+  const handleViewOrder = (serviceTitle) => {
+    setSelectedService(serviceTitle);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedService(null);
+  };
+
   return (
     <div className="service-page">
       <h1 className="service-title">Instagram Growth Services</h1>
@@ -85,13 +99,31 @@ export default function InstagramServices() {
               <p>{service.text}</p>
 
               <div className="card-btn-group">
-                <button className="order-btn">View & Order</button>
-                <button className="support-btn">Ask Support</button>
+                <button 
+                  className="order-btn"
+                  onClick={() => handleViewOrder(service.title)}
+                >
+                  View & Order
+                </button>
+                <button 
+                  className="support-btn"
+                  onClick={() => openWhatsAppSupport(service.title)}
+                >
+                  Ask Support
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* PRICING MODAL */}
+      <PricingModal
+        isOpen={!!selectedService}
+        onClose={handleCloseModal}
+        serviceTitle={selectedService}
+        platform={platform}
+      />
     </div>
   );
 }

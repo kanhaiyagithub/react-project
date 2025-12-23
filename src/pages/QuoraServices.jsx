@@ -1,10 +1,14 @@
 // src/pages/QuoraServices.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaQuora } from "react-icons/fa6";
 import "./QuoraServices.css";
+import PricingModal from "../components/PricingModal";
+import { openWhatsAppSupport } from "../utils/whatsapp";
 
 export default function QuoraServices() {
+  const [selectedService, setSelectedService] = useState(null);
+  const platform = "quora";
   const items = [
     {
       id: "followers",
@@ -70,13 +74,16 @@ export default function QuoraServices() {
               <p className="qr-desc">{it.description}</p>
 
               <div className="qr-actions">
-                <Link to={`/services/quora/${it.id}`} className="btn-primary">
+                <button
+                  className="btn-primary"
+                  onClick={() => setSelectedService(it.title)}
+                >
                   View & Order
-                </Link>
+                </button>
 
                 <button
                   className="btn-ghost"
-                  onClick={() => alert("Need support? Email support@socialviral.com")}
+                  onClick={() => openWhatsAppSupport(it.title)}
                 >
                   Contact Support
                 </button>
@@ -85,6 +92,14 @@ export default function QuoraServices() {
           ))}
         </section>
       </div>
+
+      {/* PRICING MODAL */}
+      <PricingModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        serviceTitle={selectedService}
+        platform={platform}
+      />
     </div>
   );
 }

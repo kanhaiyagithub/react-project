@@ -23,6 +23,11 @@
 }
 
 /* Section Styling */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
 .footer-section h3 {
   font-size: 20px;
   margin-bottom: 15px;
@@ -71,6 +76,7 @@
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .newsletter-box input {
@@ -78,7 +84,8 @@
   border: 2px solid #2b2b2b;
   border-radius: 25px;
   outline: none;
-  width: 220px;
+  flex: 1;
+  min-width: 200px;
 }
 
 .newsletter-box button {
@@ -88,6 +95,7 @@
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .newsletter-box button:hover {
@@ -104,6 +112,87 @@
   font-size: 14px;
 }
 
+.footer-bottom-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
 .footer-bottom-links a {
-  margin: 0 10px;
+  margin: 0 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 5%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 15px;
+    display: block;
+  }
+
+  .footer-social {
+    justify-content: center;
+    display: flex;
+  }
+
+  .newsletter-box {
+    justify-content: center;
+  }
+
+  .newsletter-box input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+  }
+
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer-bottom-links span {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+  }
+
+  .newsletter-box {
+    flex-direction: column;
+  }
+
+  .newsletter-box input,
+  .newsletter-box button {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
 }

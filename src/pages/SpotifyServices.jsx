@@ -1,10 +1,14 @@
 // src/pages/SpotifyServices.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaSpotify } from "react-icons/fa6";
 import "./SpotifyServices.css";
+import PricingModal from "../components/PricingModal";
+import { openWhatsAppSupport } from "../utils/whatsapp";
 
 export default function SpotifyServices() {
+  const [selectedService, setSelectedService] = useState(null);
+  const platform = "spotify";
   const items = [
     {
       id: "plays",
@@ -70,13 +74,16 @@ export default function SpotifyServices() {
               <p className="sp-desc">{it.description}</p>
 
               <div className="sp-actions">
-                <Link to={`/services/spotify/${it.id}`} className="btn-primary">
+                <button
+                  className="btn-primary"
+                  onClick={() => setSelectedService(it.title)}
+                >
                   View & Order
-                </Link>
+                </button>
 
                 <button
                   className="btn-ghost"
-                  onClick={() => alert("Need help? Contact support@socialviral.com")}
+                  onClick={() => openWhatsAppSupport(it.title)}
                 >
                   Contact Support
                 </button>
@@ -86,6 +93,14 @@ export default function SpotifyServices() {
         </section>
 
       </div>
+
+      {/* PRICING MODAL */}
+      <PricingModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        serviceTitle={selectedService}
+        platform={platform}
+      />
     </div>
   );
 }

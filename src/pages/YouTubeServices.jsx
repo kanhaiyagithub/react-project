@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./YouTubeServices.css";
+import PricingModal from "../components/PricingModal";
+import { openWhatsAppSupport } from "../utils/whatsapp";
 
 export default function YouTubeServices() {
+  const [selectedService, setSelectedService] = useState(null);
+  const platform = "youtube";
   const categories = [
     { name: "Buy YouTube Subscribers", price: "₹299 / 100" },
     { name: "Buy YouTube Views", price: "₹99 / 1000" },
@@ -61,13 +65,31 @@ export default function YouTubeServices() {
               <p>{service.text}</p>
 
               <div className="yt-btns">
-                <button className="yt-order-btn">View & Order</button>
-                <button className="yt-support-btn">Ask Support</button>
+                <button 
+                  className="yt-order-btn"
+                  onClick={() => setSelectedService(service.title)}
+                >
+                  View & Order
+                </button>
+                <button 
+                  className="yt-support-btn"
+                  onClick={() => openWhatsAppSupport(service.title)}
+                >
+                  Ask Support
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* PRICING MODAL */}
+      <PricingModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        serviceTitle={selectedService}
+        platform={platform}
+      />
     </div>
   );
 }

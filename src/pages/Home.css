@@ -108,15 +108,78 @@
 
 /* Responsive */
 @media screen and (max-width: 768px) {
+  .home-container {
+    padding: 40px 15px;
+  }
+
+  .home-heading {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .cards-container {
+    gap: 20px;
+  }
+
   .guarantee-card {
-    width: 90%;
+    width: 100%;
+    max-width: 400px;
   }
 
   .guarantees-section {
     padding: 40px 20px;
+    margin-top: 50px;
+  }
+
+  .guarantees-section h2 {
+    font-size: 28px;
+  }
+
+  .guarantees-section p {
+    font-size: 16px;
+  }
+
+  .guarantee-cards {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-container {
+    padding: 30px 10px;
   }
 
   .home-heading {
-    font-size: 32px;
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .cards-container {
+    gap: 15px;
+  }
+
+  .guarantees-section {
+    padding: 30px 15px;
+    margin-top: 40px;
+  }
+
+  .guarantees-section h2 {
+    font-size: 24px;
+  }
+
+  .guarantees-section p {
+    font-size: 14px;
+  }
+
+  .guarantee-card {
+    padding: 20px;
+  }
+
+  .guarantee-card h3 {
+    font-size: 20px;
+  }
+
+  .guarantee-card p {
+    font-size: 14px;
   }
 }

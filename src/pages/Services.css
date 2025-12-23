@@ -94,7 +94,66 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .services-section {
+    padding: 60px 0;
+  }
+
   .section-title {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .icon {
     font-size: 30px;
+  }
+
+  .service-title {
+    font-size: 16px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-card {
+    padding: 18px;
+  }
+
+  .icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .service-title {
+    font-size: 15px;
+  }
+
+  .service-card p {
+    font-size: 12px;
   }
 }

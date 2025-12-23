@@ -1,10 +1,14 @@
 // src/pages/PinterestServices.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaPinterest } from "react-icons/fa6";
 import "./PinterestServices.css";
+import PricingModal from "../components/PricingModal";
+import { openWhatsAppSupport } from "../utils/whatsapp";
 
 export default function PinterestServices() {
+  const [selectedService, setSelectedService] = useState(null);
+  const platform = "pinterest";
   const items = [
     {
       id: "followers",
@@ -70,13 +74,16 @@ export default function PinterestServices() {
               <p className="pt-desc">{it.description}</p>
 
               <div className="pt-actions">
-                <Link to={`/services/pinterest/${it.id}`} className="btn-primary">
+                <button
+                  className="btn-primary"
+                  onClick={() => setSelectedService(it.title)}
+                >
                   View & Order
-                </Link>
+                </button>
 
                 <button
                   className="btn-ghost"
-                  onClick={() => alert("Need help? Email support@socialviral.com")}
+                  onClick={() => openWhatsAppSupport(it.title)}
                 >
                   Contact Support
                 </button>
@@ -86,6 +93,14 @@ export default function PinterestServices() {
         </section>
 
       </div>
+
+      {/* PRICING MODAL */}
+      <PricingModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        serviceTitle={selectedService}
+        platform={platform}
+      />
     </div>
   );
 }

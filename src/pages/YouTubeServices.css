@@ -114,13 +114,100 @@
   
   /* MOBILE RESPONSIVE */
   @media (max-width: 900px) {
+    .yt-page {
+      padding: 40px 15px;
+    }
+
+    .yt-title {
+      font-size: 32px;
+    }
+
+    .yt-subtitle {
+      font-size: 16px;
+    }
+
     .yt-layout {
       flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
     }
   
     .yt-category-list,
     .yt-cards {
       width: 100%;
+    }
+
+    .yt-category-list {
+      padding: 20px;
+    }
+
+    .yt-cards {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .yt-card {
+      padding: 20px;
+    }
+
+    .yt-card h2 {
+      font-size: 20px;
+    }
+
+    .yt-btns {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .yt-order-btn,
+    .yt-support-btn {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .yt-page {
+      padding: 30px 10px;
+    }
+
+    .yt-title {
+      font-size: 24px;
+    }
+
+    .yt-subtitle {
+      font-size: 14px;
+    }
+
+    .yt-category-list {
+      padding: 15px;
+    }
+
+    .yt-category-item {
+      padding: 12px 6px;
+      font-size: 15px;
+    }
+
+    .yt-cards {
+      gap: 15px;
+    }
+
+    .yt-card {
+      padding: 15px;
+    }
+
+    .yt-card h2 {
+      font-size: 18px;
+    }
+
+    .yt-card p {
+      font-size: 14px;
+    }
+
+    .yt-badge {
+      top: 10px;
+      right: 10px;
+      padding: 5px 12px;
+      font-size: 14px;
     }
   }
   

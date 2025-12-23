@@ -1,10 +1,14 @@
 // src/pages/FacebookServices.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa6";
 import "./FacebookServices.css";
+import PricingModal from "../components/PricingModal";
+import { openWhatsAppSupport } from "../utils/whatsapp";
 
 export default function FacebookServices() {
+  const [selectedService, setSelectedService] = useState(null);
+  const platform = "facebook";
   const items = [
     {
       id: "followers",
@@ -70,13 +74,16 @@ export default function FacebookServices() {
               <p className="fb-desc">{it.description}</p>
 
               <div className="fb-actions">
-                <Link to={`/services/facebook/${it.id}`} className="btn-primary">
+                <button
+                  className="btn-primary"
+                  onClick={() => setSelectedService(it.title)}
+                >
                   View & Order
-                </Link>
+                </button>
 
                 <button
                   className="btn-ghost"
-                  onClick={() => alert("For assistance, email support@socialviral.com")}
+                  onClick={() => openWhatsAppSupport(it.title)}
                 >
                   Contact Support
                 </button>
@@ -86,6 +93,14 @@ export default function FacebookServices() {
         </section>
 
       </div>
+
+      {/* PRICING MODAL */}
+      <PricingModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        serviceTitle={selectedService}
+        platform={platform}
+      />
     </div>
   );
 }

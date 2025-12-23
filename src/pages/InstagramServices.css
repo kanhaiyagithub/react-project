@@ -114,12 +114,106 @@
   
   /* MOBILE RESPONSIVE */
   @media (max-width: 900px) {
+    .service-page {
+      padding: 40px 15px;
+    }
+
+    .service-title {
+      font-size: 32px;
+    }
+
+    .service-subtitle {
+      font-size: 16px;
+    }
+
     .service-layout {
       flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
     }
   
     .category-list, .service-cards {
       width: 100%;
+    }
+
+    .category-list {
+      padding: 20px;
+    }
+
+    .service-cards {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 20px;
+    }
+
+    .service-card h2 {
+      font-size: 20px;
+    }
+
+    .card-btn-group {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .order-btn,
+    .support-btn {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .service-page {
+      padding: 30px 10px;
+    }
+
+    .service-title {
+      font-size: 24px;
+    }
+
+    .service-subtitle {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .service-layout {
+      margin-top: 20px;
+      gap: 15px;
+    }
+
+    .category-list {
+      padding: 15px;
+    }
+
+    .category-item {
+      padding: 12px 8px;
+      font-size: 15px;
+    }
+
+    .service-cards {
+      gap: 15px;
+    }
+
+    .service-card {
+      padding: 15px;
+    }
+
+    .service-card h2 {
+      font-size: 18px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      margin: 10px 0 15px;
+    }
+
+    .price-badge {
+      top: 10px;
+      right: 10px;
+      padding: 5px 12px;
+      font-size: 14px;
     }
   }
   

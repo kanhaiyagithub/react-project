@@ -1,10 +1,14 @@
 // src/pages/SnapchatServices.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaSnapchat } from "react-icons/fa6";
 import "./SnapchatServices.css";
+import PricingModal from "../components/PricingModal";
+import { openWhatsAppSupport } from "../utils/whatsapp";
 
 export default function SnapchatServices() {
+  const [selectedService, setSelectedService] = useState(null);
+  const platform = "snapchat";
   const items = [
     {
       id: "story-views",
@@ -70,13 +74,16 @@ export default function SnapchatServices() {
               <p className="sc-desc">{it.description}</p>
 
               <div className="sc-actions">
-                <Link to={`/services/snapchat/${it.id}`} className="btn-primary">
+                <button
+                  className="btn-primary"
+                  onClick={() => setSelectedService(it.title)}
+                >
                   View & Order
-                </Link>
+                </button>
 
                 <button
                   className="btn-ghost"
-                  onClick={() => alert("For help, email: support@socialviral.com")}
+                  onClick={() => openWhatsAppSupport(it.title)}
                 >
                   Contact Support
                 </button>
@@ -85,6 +92,14 @@ export default function SnapchatServices() {
           ))}
         </section>
       </div>
+
+      {/* PRICING MODAL */}
+      <PricingModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        serviceTitle={selectedService}
+        platform={platform}
+      />
     </div>
   );
 }

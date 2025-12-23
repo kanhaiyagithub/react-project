@@ -1,20 +1,29 @@
 .guarantees-section {
   padding: 60px 40px;
-  background-color: #f9f9f9;
+  background: linear-gradient(135deg, #f7e5c8, #f1d6f4, #e8dbff);
   text-align: center;
 }
 
+.how-it-works-section {
+  margin-bottom: 0;
+}
+
+.guarantees-section:not(.how-it-works-section) {
+  background: linear-gradient(135deg, #fff3d9, #ffeef6, #f6f2ff);
+  margin-top: 0;
+}
+
 .guarantees-section h2 {
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #222;
+  color: #5a3e7c;
 }
 
 .guarantees-section .subtitle {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 40px;
+  font-size: 16px;
+  color: #7d6a90;
+  margin-bottom: 45px;
 }
 
 .guarantee-cards {
@@ -25,19 +34,43 @@
 }
 
 .guarantee-card {
-  background: #fff;
-  border-radius: 16px;
+  background: #ffffff;
+  border-radius: 18px;
   padding: 30px 25px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  width: 320px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.10);
+  transition: all 0.3s ease-in-out;
+  width: 280px;
   max-width: 100%;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .guarantee-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+  font-size: 20px;
+  background: #f3e0ff;
+  color: #7a4fa3;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-weight: bold;
+}
+
+.step-icon {
+  margin-bottom: 12px;
+}
+
+.step-icon i {
+  font-size: 32px;
+  color: #b37de0;
 }
 
 .icon-wrapper {
@@ -65,15 +98,70 @@
   color: #007bff;
 }
 
+.icon-wrapper.green {
+  background-color: #d4edda;
+  color: #28a745;
+}
+
 .guarantee-card h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 10px;
-  color: #222;
+  color: #543a78;
+  margin-bottom: 8px;
 }
 
 .guarantee-card p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.6;
+  font-size: 14px;
+  color: #6f5e85;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .guarantees-section {
+    padding: 40px 20px;
+  }
+
+  .guarantees-section h2 {
+    font-size: 28px;
+  }
+
+  .guarantees-section .subtitle {
+    font-size: 16px;
+  }
+
+  .guarantee-cards {
+    gap: 20px;
+  }
+
+  .guarantee-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .guarantees-section {
+    padding: 30px 15px;
+  }
+
+  .guarantees-section h2 {
+    font-size: 24px;
+  }
+
+  .guarantees-section .subtitle {
+    font-size: 14px;
+  }
+
+  .guarantee-card {
+    padding: 20px;
+  }
+
+  .guarantee-card h3 {
+    font-size: 18px;
+  }
+
+  .guarantee-card p {
+    font-size: 14px;
+  }
 }

@@ -1,5 +1,6 @@
 .price-card {
   width: 250px;
+  max-width: 100%;
   border-radius: 12px;
   background: #fff;
   padding: 24px;
@@ -32,4 +33,27 @@
 .price-card ul li {
   margin: 6px 0;
   color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .price-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .price-card h3 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
 }

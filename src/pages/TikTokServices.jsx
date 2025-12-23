@@ -1,9 +1,13 @@
 // src/pages/TikTokServices.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./TikTokServices.css";
+import PricingModal from "../components/PricingModal";
+import { openWhatsAppSupport } from "../utils/whatsapp";
 
 export default function TikTokServices() {
+  const [selectedService, setSelectedService] = useState(null);
+  const platform = "tiktok";
   const items = [
     {
       id: "followers",
@@ -68,18 +72,16 @@ export default function TikTokServices() {
               <p className="tt-desc">{it.description}</p>
 
               <div className="tt-actions">
-                <Link
-                  to={`/services/tiktok/${it.id}`}
+                <button
                   className="btn-primary"
+                  onClick={() => setSelectedService(it.title)}
                 >
                   View & Order
-                </Link>
+                </button>
 
                 <button
                   className="btn-ghost"
-                  onClick={() =>
-                    alert("Need help? Contact support@socialviral.com")
-                  }
+                  onClick={() => openWhatsAppSupport(it.title)}
                 >
                   Ask Support
                 </button>
@@ -88,6 +90,14 @@ export default function TikTokServices() {
           ))}
         </section>
       </div>
+
+      {/* PRICING MODAL */}
+      <PricingModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        serviceTitle={selectedService}
+        platform={platform}
+      />
     </div>
   );
 }

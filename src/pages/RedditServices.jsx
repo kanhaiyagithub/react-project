@@ -1,10 +1,14 @@
 // src/pages/RedditServices.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaReddit } from "react-icons/fa6";
 import "./RedditServices.css";
+import PricingModal from "../components/PricingModal";
+import { openWhatsAppSupport } from "../utils/whatsapp";
 
 export default function RedditServices() {
+  const [selectedService, setSelectedService] = useState(null);
+  const platform = "reddit";
   const items = [
     {
       id: "upvotes",
@@ -67,13 +71,16 @@ export default function RedditServices() {
               <p className="rd-desc">{it.description}</p>
 
               <div className="rd-actions">
-                <Link to={`/services/reddit/${it.id}`} className="btn-primary">
+                <button
+                  className="btn-primary"
+                  onClick={() => setSelectedService(it.title)}
+                >
                   View & Order
-                </Link>
+                </button>
 
                 <button
                   className="btn-ghost"
-                  onClick={() => alert("Need help? Contact support@socialviral.com")}
+                  onClick={() => openWhatsAppSupport(it.title)}
                 >
                   Ask Support
                 </button>
@@ -82,6 +89,14 @@ export default function RedditServices() {
           ))}
         </section>
       </div>
+
+      {/* PRICING MODAL */}
+      <PricingModal
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        serviceTitle={selectedService}
+        platform={platform}
+      />
     </div>
   );
 }
