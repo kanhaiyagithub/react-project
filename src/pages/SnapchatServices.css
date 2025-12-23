@@ -1,0 +1,165 @@
+/* SnapchatServices.css */
+
+.sc-page {
+    padding: 40px 0 80px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fffbea, #fff7e6);
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+  /* Hero Section */
+  .sc-hero {
+    text-align: center;
+    padding: 28px 20px;
+  }
+  
+  .sc-icon {
+    font-size: 60px;
+    color: #fffc00; /* Snapchat Yellow */
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.25));
+  }
+  
+  .sc-hero h1 {
+    font-size: 34px;
+    color: #3b2a64;
+  }
+  
+  .sc-sub {
+    max-width: 850px;
+    margin: 10px auto 0;
+    color: #5c4b71;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+  
+  /* Layout */
+  .sc-content {
+    display: flex;
+    gap: 26px;
+    margin-top: 22px;
+  }
+  
+  /* Sidebar */
+  .sc-sidebar {
+    width: 280px;
+    background: #fffef2;
+    padding: 14px;
+    border-radius: 14px;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  
+  .sc-sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .sc-sidebar li + li {
+    margin-top: 12px;
+  }
+  
+  .sc-side-link {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #2b2b2b;
+    transition: 0.18s ease;
+  }
+  
+  .sc-side-link:hover {
+    background: rgba(255,252,0,0.2);
+    transform: translateX(4px);
+    color: #c7b800;
+  }
+  
+  /* Grid Section */
+  .sc-grid {
+    flex: 1;
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .sc-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    transition: 0.25s ease;
+  }
+  
+  .sc-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Card Header */
+  .sc-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sc-card h3 {
+    font-size: 19px;
+    color: #3b2a64;
+    margin: 0;
+  }
+  
+  .sc-price {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #fff7a1, #fff48d);
+    font-weight: 700;
+  }
+  
+  /* Description */
+  .sc-desc {
+    margin: 12px 0 20px;
+    line-height: 1.6;
+    color: #5c4b71;
+  }
+  
+  /* CTA Buttons */
+  .btn-primary {
+    background: #5a3e7c;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(90,62,124,0.15);
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #5a3e7c;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sc-content {
+      flex-direction: column;
+    }
+    .sc-sidebar {
+      width: 100%;
+      order: 2;
+    }
+    .sc-grid {
+      order: 1;
+    }
+  }
+  

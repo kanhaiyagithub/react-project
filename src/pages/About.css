@@ -1,0 +1,27 @@
+.about-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .about-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .about-container h2 {
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .tagline {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #444;
+    font-style: italic;
+  }
+  

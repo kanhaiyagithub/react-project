@@ -1,0 +1,79 @@
+.guarantees-section {
+  padding: 60px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.guarantees-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.guarantees-section .subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.guarantee-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.guarantee-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width: 320px;
+  max-width: 100%;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guarantee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.icon-wrapper {
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper.pink {
+  background-color: #f0d9ff;
+  color: #a64ac9;
+}
+
+.icon-wrapper.orange {
+  background-color: #ffe2c6;
+  color: #ff7300;
+}
+
+.icon-wrapper.blue {
+  background-color: #cfe8ff;
+  color: #007bff;
+}
+
+.guarantee-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.guarantee-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}

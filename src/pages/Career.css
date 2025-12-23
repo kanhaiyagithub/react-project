@@ -1,0 +1,44 @@
+.career-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 25px;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  .career-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .career-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .career-form input,
+  .career-form select,
+  .career-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  
+  .career-btn {
+    padding: 12px;
+    background: #2b6ef3;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .career-btn:hover {
+    background: #1f5ad1;
+  }
+  

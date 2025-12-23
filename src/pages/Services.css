@@ -1,0 +1,100 @@
+/* Section */
+.services-section {
+  background: linear-gradient(135deg, #f7e5c8, #f1d6f4, #e8dbff);
+  padding: 80px 0;
+  color: #2b2b2b;
+  border-radius: 0 0 50px 50px;
+}
+
+/* Container */
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Title */
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: #5a3e7c;
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* ✅ Link wrapper (VERY IMPORTANT) */
+.service-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Card */
+.service-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.10);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(0,0,0,0.05);
+  cursor: pointer;
+}
+
+/* Hover effects */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon */
+.icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+/* Titles inside card */
+.service-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2b2b2b;
+}
+
+/* Description */
+.service-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Icon color classes */
+.pink { color: #e1306c; }
+.red { color: #ff0000; }
+.orange { color: #ff4500; }
+.green { color: #1db954; }
+.blue { color: #1877f2; }
+.blueDark { color: #0a66c2; }
+.black { color: #000000; }
+.yellow { color: #fffc00; }
+.indigo { color: #5865f2; }
+
+/* ✅ Keyboard focus (accessibility) */
+.service-link:focus-visible .service-card {
+  outline: 2px solid #5a3e7c;
+  outline-offset: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 30px;
+  }
+}

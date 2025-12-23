@@ -1,0 +1,125 @@
+.service-page {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f7e5c8, #f1d6f4, #e8dbff);
+    min-height: 100vh;
+  }
+  
+  .service-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: #4b2e83;
+  }
+  
+  .service-subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .service-layout {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+  }
+  
+  /* LEFT CATEGORY LIST */
+  .category-list {
+    width: 28%;
+    background: #ffffffcc;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+  
+  .category-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 10px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .price-tag {
+    color: #9b59b6;
+    font-weight: bold;
+  }
+  
+  /* RIGHT SIDE CARDS */
+  .service-cards {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+  }
+  
+  .service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .service-card h2 {
+    font-size: 22px;
+    color: #3d1b67;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .price-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ffb6c1;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .service-card p {
+    margin: 12px 0 20px;
+    color: #444;
+  }
+  
+  .card-btn-group {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .order-btn {
+    background: #6437c0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .support-btn {
+    background: white;
+    border: 2px solid #6437c0;
+    color: #6437c0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* MOBILE RESPONSIVE */
+  @media (max-width: 900px) {
+    .service-layout {
+      flex-direction: column;
+    }
+  
+    .category-list, .service-cards {
+      width: 100%;
+    }
+  }
+  

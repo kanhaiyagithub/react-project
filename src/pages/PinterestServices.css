@@ -1,0 +1,167 @@
+/* PinterestServices.css */
+
+.pt-page {
+    padding: 40px 0 80px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffeaea, #fff4f4);
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .pt-hero {
+    text-align: center;
+    padding: 28px 20px;
+  }
+  
+  .pt-icon {
+    font-size: 60px;
+    color: #e60023; /* Pinterest Red */
+    margin-bottom: 12px;
+  }
+  
+  .pt-hero h1 {
+    font-size: 34px;
+    color: #3b2a64;
+  }
+  
+  .pt-sub {
+    font-size: 15px;
+    color: #5c4b71;
+    max-width: 850px;
+    margin: 10px auto 0;
+    line-height: 1.7;
+  }
+  
+  /* Layout */
+  .pt-content {
+    display: flex;
+    gap: 26px;
+    margin-top: 22px;
+  }
+  
+  /* Sidebar */
+  .pt-sidebar {
+    width: 280px;
+    background: #fff5f5;
+    padding: 14px;
+    border-radius: 14px;
+    box-shadow: 0 10px 32px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  
+  .pt-sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .pt-sidebar li + li {
+    margin-top: 12px;
+  }
+  
+  .pt-side-link {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #2b2b2b;
+    transition: 0.18s ease;
+  }
+  
+  .pt-side-link:hover {
+    background: rgba(230,0,35,0.15);
+    transform: translateX(4px);
+    color: #e60023;
+  }
+  
+  /* Grid */
+  .pt-grid {
+    flex: 1;
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .pt-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    transition: 0.25s ease;
+  }
+  
+  .pt-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 48px rgba(0,0,0,0.12);
+  }
+  
+  /* Card Header */
+  .pt-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pt-card h3 {
+    margin: 0;
+    font-size: 19px;
+    color: #3b2a64;
+  }
+  
+  .pt-price {
+    background: linear-gradient(90deg, #ffc8c8, #ffb3b3);
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    color: #2b2b2b;
+  }
+  
+  /* Description */
+  .pt-desc {
+    margin: 12px 0 20px;
+    color: #5c4b71;
+    line-height: 1.6;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background: #5a3e7c;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(90,62,124,0.15);
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #5a3e7c;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .pt-content {
+      flex-direction: column;
+    }
+  
+    .pt-sidebar {
+      width: 100%;
+      order: 2;
+    }
+  
+    .pt-grid {
+      order: 1;
+    }
+  }
+  

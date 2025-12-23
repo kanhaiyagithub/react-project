@@ -1,0 +1,122 @@
+/* -------------------------------------------
+   HOME PAGE – Aesthetic Modern UI
+   Matching Footer + Testimonials + Login Theme
+-------------------------------------------- */
+
+/* Background + Layout */
+.home-container {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f7e5c8, #f1d6f4, #e8dbff);
+  min-height: 100vh;
+}
+
+/* Main Heading */
+.home-heading {
+  font-size: 38px;
+  margin-bottom: 40px;
+  color: #5a3e7c;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Container */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+/* Guarantee Section */
+.guarantees-section {
+  margin-top: 80px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fff3d9, #ffeef6, #f6f2ff);
+  border-radius: 25px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Guarantee Title */
+.guarantees-section h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #5a3e7c;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.guarantees-section p {
+  font-size: 18px;
+  color: #6a5b7e;
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.guarantee-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual Card */
+.guarantee-card {
+  width: 320px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: left;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.guarantee-card:hover {
+  transform: translateY(-6px);
+  border-color: #d2b7ff;
+  box-shadow: 0px 15px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Icons */
+.guarantee-icon {
+  height: 64px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.15));
+}
+
+/* Card Title */
+.guarantee-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4b2b6b;
+  margin-bottom: 10px;
+}
+
+/* Card Text */
+.guarantee-card p {
+  font-size: 15px;
+  color: #5c4b71;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .guarantee-card {
+    width: 90%;
+  }
+
+  .guarantees-section {
+    padding: 40px 20px;
+  }
+
+  .home-heading {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,126 @@
+.yt-page {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f7e5c8, #f1d6f4, #e8dbff);
+    min-height: 100vh;
+  }
+  
+  .yt-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: #ba0000; /* YouTube red tone */
+  }
+  
+  .yt-subtitle {
+    text-align: center;
+    color: #444;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .yt-layout {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+  }
+  
+  /* LEFT SIDEBAR */
+  .yt-category-list {
+    width: 28%;
+    background: #ffffffd5;
+    padding: 26px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+  
+  .yt-category-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 6px;
+    font-size: 17px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    color: #333;
+  }
+  
+  .yt-price-tag {
+    color: #d00000;
+    font-weight: bold;
+  }
+  
+  /* RIGHT SIDE SERVICE CARDS */
+  .yt-cards {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+  }
+  
+  .yt-card {
+    background: #fff;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .yt-card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #a30000;
+  }
+  
+  .yt-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ffb3b3;
+    color: #450000;
+    padding: 6px 14px;
+    font-weight: 700;
+    border-radius: 20px;
+  }
+  
+  .yt-card p {
+    margin: 12px 0 20px;
+    color: #444;
+  }
+  
+  /* BUTTONS */
+  .yt-btns {
+    display: flex;
+    gap: 14px;
+  }
+  
+  .yt-order-btn {
+    background: #c70000;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .yt-support-btn {
+    background: #fff;
+    border: 2px solid #c70000;
+    color: #c70000;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* MOBILE RESPONSIVE */
+  @media (max-width: 900px) {
+    .yt-layout {
+      flex-direction: column;
+    }
+  
+    .yt-category-list,
+    .yt-cards {
+      width: 100%;
+    }
+  }
+  

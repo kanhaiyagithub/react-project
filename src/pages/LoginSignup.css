@@ -1,0 +1,105 @@
+/* Background matches footer theme */
+.auth-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7d29e, #c7b5e8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+  }
+  
+  /* White Box */
+  .auth-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    width: 100%;
+    max-width: 430px;
+    border-radius: 18px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  /* Header */
+  .auth-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .auth-icon {
+    font-size: 40px;
+    color: #333;
+  }
+  
+  /* INPUT FIELDS */
+  .auth-input {
+    position: relative;
+    margin: 18px 0;
+    border-bottom: 2px solid #555;
+    display: flex;
+    align-items: center;
+  }
+  
+  .auth-input i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #444;
+  }
+  
+  .auth-input input {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+  }
+  
+  /* Options */
+  .auth-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .forgot-link {
+    color: #333;
+    text-decoration: underline;
+  }
+  
+  /* Button */
+  .auth-button {
+    width: 100%;
+    padding: 14px;
+    background: #374a71;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .auth-button:hover {
+    background: #263c5a;
+  }
+  
+  /* Switch Text */
+  .switch-text {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .switch-link {
+    color: #222;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  

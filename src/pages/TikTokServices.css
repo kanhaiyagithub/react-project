@@ -1,0 +1,169 @@
+/* TikTokServices.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .tt-page {
+    padding: 40px 0 80px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe7f3, #eae4ff, #f7eaff);
+  }
+  
+  /* Hero section */
+  .tt-hero {
+    text-align: center;
+    padding: 36px 20px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+  }
+  
+  .tt-hero h1 {
+    font-size: 34px;
+    color: #4a2b7b;
+    margin-bottom: 8px;
+  }
+  
+  .tt-sub {
+    color: #665680;
+    font-size: 15px;
+  }
+  
+  /* Page layout */
+  .tt-content {
+    display: flex;
+    gap: 28px;
+  }
+  
+  /* Sidebar */
+  .tt-sidebar {
+    width: 280px;
+    background: #f8f9fc;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+  }
+  
+  .tt-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tt-sidebar li + li {
+    margin-top: 10px;
+  }
+  
+  .tt-side-link {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #2b2b2b;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+  }
+  
+  .tt-side-link:hover {
+    background: rgba(74, 43, 123, 0.08);
+    transform: translateX(4px);
+  }
+  
+  .side-title {
+    font-weight: 600;
+  }
+  
+  .side-price {
+    font-size: 13px;
+    color: #7a6b91;
+  }
+  
+  /* Cards */
+  .tt-grid {
+    flex: 1;
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .tt-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+  }
+  
+  .tt-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  }
+  
+  .tt-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tt-card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #3d2e65;
+  }
+  
+  .tt-price {
+    background: linear-gradient(90deg, #ff92b2, #ffb8d8);
+    padding: 8px 12px;
+    border-radius: 12px;
+    color: #2b2b2b;
+    font-weight: 700;
+  }
+  
+  .tt-desc {
+    color: #5c4c70;
+    margin: 12px 0 20px;
+    line-height: 1.6;
+  }
+  
+  /* Buttons */
+  .tt-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .btn-primary {
+    background: #2b74ff;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .btn-ghost {
+    border: 1px solid rgba(0,0,0,0.12);
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #fff;
+    color: #2b74ff;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .tt-content {
+      flex-direction: column;
+    }
+  
+    .tt-sidebar {
+      width: 100%;
+      order: 2;
+    }
+  
+    .tt-grid {
+      order: 1;
+    }
+  }
+  
