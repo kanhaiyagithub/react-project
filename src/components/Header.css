@@ -59,6 +59,17 @@
   color: #000;
 }
 
+.logout-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.logout-btn:hover {
+  color: #000;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .social-header-container {

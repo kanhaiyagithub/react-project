@@ -1,12 +1,21 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import './Header.css';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { logout } = useAuth();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLogout = () => {
+    logout();
+    navigate('/', { replace: true });
+    setIsMenuOpen(false);
   };
 
   return (
@@ -21,10 +30,12 @@ export default function Header() {
         </button>
 
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-          <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
+          <Link to="/home" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
           <Link to="/services" className="nav-link" onClick={() => setIsMenuOpen(false)}>Services</Link>
           <Link to="/testimonials" className="nav-link" onClick={() => setIsMenuOpen(false)}>Testimonials</Link>
-          <Link to="/login" className="nav-link" onClick={() => setIsMenuOpen(false)}>Login / Sign Up</Link>
+          <button className="nav-link logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
         </nav>
       </div>
     </header>
